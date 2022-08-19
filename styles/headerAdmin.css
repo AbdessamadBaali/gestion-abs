@@ -1,0 +1,72 @@
+header {
+    width: 100%;
+    height: 50px;
+    background-color: #2f305c; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+:root 
+{
+    --textColor: white;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--textColor);
+    margin:0 ;
+}
+nav ul li {
+    list-style: none;
+}
+nav ul li label {
+    cursor: pointer;
+}
+a{
+    cursor: pointer;
+    list-style: none;
+    color: var(--textColor);
+    margin: 0 15px;
+}
+nav ul li > ul{
+    display: none;
+    position: absolute;
+    top: 50px;
+    background-color: #0000008d;
+    padding: 0;
+}
+nav ul li > ul li input[type='submit'], nav ul li input[type='submit']
+{
+    border: none;
+    color: var(--textColor);
+    background-color: transparent;
+    transition: ease-in-out .25s;
+    margin: 10px;
+    width: 150px;
+    text-transform: capitalize;
+    cursor: pointer;
+
+}
+nav ul li > ul li input[type='submit']:hover,
+nav ul li label:hover,
+nav ul li input[type='submit']:hover,
+nav a:hover
+{
+    color: goldenrod;
+}
+
+#dropdown{
+    display: none;
+}
+nav ul li #dropdown:checked ~ ul{
+    display: block;
+}
+nav ul li> ul:hover li{
+    display: block;
+}
+
+header > div {
+    margin: 0 20px;
+    color: var(--textColor);
+}
